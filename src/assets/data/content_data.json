@@ -1,0 +1,109 @@
+{
+    "cmd-commands": {
+        "title": "Windows CMD Commands",
+        "items": [
+            {
+                "title": "Show Current User",
+                "command": "whoami"
+            },
+                        {
+                "title": "Show Users on the System",
+                "command": "whoami"
+            },
+            {
+                "title": "Show Network Configuration",
+                "command": "ipconfig /all"
+            },
+            {
+                "title": "Display Active Connections",
+                "command": "netstat -an"
+            },
+            {
+                "title": "Ping a Website",
+                "command": "ping www.example.com"
+            },
+            {
+                "title": "Display Active Network Connections",
+                "command": "netstat -an"
+            },
+            {
+                "title": "WIFI PROFILES",
+                "commands": [
+                    "netsh wlan show profiles",
+                    "netsh wlan show networks"
+                ]
+            }
+        ]
+    },
+    "git-commands": {
+        "title": "Git Commands",
+        "items": [
+            {
+                "title": "Clone Git Repository to your local machine",
+                "command": "git clone https://github.com/yourrepository"
+            },
+            {
+                "title": "Git create a branch",
+                "command": "git checkout -b hotFix"
+            },
+            {
+                "title": "Git remove a file",
+                "command": "git rm \"file name\""
+            },
+            {
+                "title": "Git add all edited files to queue",
+                "command": "git add ."
+            },
+            {
+                "title": "Remove from add",
+                "command": "git reset"
+            },
+            {
+                "title": "Commit changes",
+                "command": "git commit -m \"Your Message\""
+            }
+        ]
+    },
+    "npm-commands": {
+        "title": "NPM Commands",
+        "items": [
+            {
+                "title": "Initialize a new package",
+                "command": "npm init -y"
+            },
+            {
+                "title": "Install dependencies",
+                "command": "npm install"
+            },
+            {
+                "title": "Install a package",
+                "command": "npm install package-name"
+            },
+            {
+                "title": "Uninstall a package",
+                "command": "npm uninstall package-name"
+            }
+        ]
+    },
+    "docker-basics": {
+        "title": "Docker Basics",
+        "items": [
+            {
+                "title": "List running containers",
+                "command": "docker ps"
+            },
+            {
+                "title": "List all containers",
+                "command": "docker ps -a"
+            },
+            {
+                "title": "Build an image",
+                "command": "docker build -t image-name ."
+            },
+            {
+                "title": "Run a container",
+                "command": "docker run -d -p 8080:80 image-name"
+            }
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+RewriteEngine On
+
+# --- Force HTTPS ---
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# --- Serve existing files first ---
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# --- Handle all clean URLs ---
+
+RewriteRule ^([^./]+)/?$ $1.html [L]
+
+# --- Custom 404 page ---
+
+ErrorDocument 404 /404.html
+
+# --- Disable directory listing ---
+
+Options -Indexes
