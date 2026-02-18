@@ -8,6 +8,7 @@ import BlogContent from "@/app/components/BlogContent";
 import contentData  from "@/assets/data/content_data";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import { SEO } from "@/app/components/SEO";
+import { motion } from "framer-motion";
 
 export default function BlogLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,6 +47,11 @@ export default function BlogLayout() {
   ];
 
   // console.log("Content Data:", contentData);
+
+  const mobileItem = {
+    hidden: { opacity: 0, x: 20 },
+    show: { opacity: 1, x: 0 },
+  };
 
   return (
     <>
@@ -100,35 +106,52 @@ export default function BlogLayout() {
         </nav>
 
         {/* Mobile Menu Slide-in */}
-        <div
-          className={`fixed inset-y-0 right-0 z-40 w-44 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${
-            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: mobileMenuOpen ? 0 : "100%" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="fixed inset-y-0 right-0 z-40 w-80 bg-white shadow-2xl"
         >
-          <div className="flex flex-col h-full pt-20 pb-6 px-6 space-y-3">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() =>
-                  window.open(
-                    `https://scarletwingscreative.com#${section.id}`, "_self"
-                  )
-                }
-                className="
+
+          <motion.div
+            initial="hidden"
+            animate={mobileMenuOpen ? "show" : "hidden"}
+            variants={{
+              hidden: {},
+              show: {
+                transition: { staggerChildren: 0.06 },
+              },
+            }}
+            className="flex flex-col pt-20 px-6 space-y-3"
+          >
+            {sections.map((section) => {
+              return (
+                <motion.button
+                  variants={mobileItem}
+                  key={section.id}
+                  onClick={() =>
+                    window.open(
+                      `https://scarletwingscreative.com#${section.id}`,
+                      "_self"
+                    )
+                  }
+                  className="
                     px-1 sm:px-2 py-2
                     transition-colors
                     cursor-pointer
                     font-medium
                     text-right
+                    lg:text-left
                     text-gray-600
                     hover:text-gray-900
                   "
-              >
-                {section.label}
-              </button>
-            ))}
-          </div>
-        </div>
+                >
+                  {section.label}
+                </motion.button>
+              )
+            })}
+          </motion.div>
+        </motion.div>
 
         {mobileMenuOpen && (
           <div

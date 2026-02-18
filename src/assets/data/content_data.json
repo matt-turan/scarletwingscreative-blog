@@ -3,10 +3,24 @@
         "title": "Windows CMD Commands",
         "items": [
             {
-                "title": "Show Current User",
-                "command": "whoami"
+                "title": "Windows Restart Computer",
+                "command": "shutdown /r /t 0",
+                "options":
+                [
+                    "/r = Restart",
+                    "/t 10 = Wait 10 seconds"
+                ]
             },
-                        {
+            {
+                "title": "Shorten Current Directory",
+                "command": "prompt $n$g",
+                "example":
+                [
+                    "C:\/YourCurrentDirectory\/YourFolderName\/",
+                    "C>"
+                ]
+            },
+            {
                 "title": "Show Users on the System",
                 "command": "whoami"
             },
@@ -27,9 +41,14 @@
                 "command": "netstat -an"
             },
             {
-                "title": "WIFI PROFILES",
+                "title": "Show Wifi Profiles ",
                 "commands": [
-                    "netsh wlan show profiles",
+                    "netsh wlan show profiles"
+                ]
+            },
+            {
+                "title": "Show Networks",
+                "commands": [
                     "netsh wlan show networks"
                 ]
             }

@@ -51,6 +51,21 @@ export default function BlogContent({
               </div>
             )}
 
+            {/* {item.options} */}
+            {/* {item.options && (
+              <div>
+                {item.options.map((option, index) => {
+                  return (
+                    <div key={index} className="relative group">
+                      <pre className="p-4 bg-slate-900 text-slate-100 overflow-x-auto">
+                        <code className="text-sm font-mono">{option}</code>
+                      </pre>
+                    </div>
+                  );
+                })}
+              </div>
+            )} */}
+
             {item.commands && (
               <div className="space-y-0">
                 {item.commands.map((cmd, cmdIdx) => (
