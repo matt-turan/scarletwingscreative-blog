@@ -1,9 +1,8 @@
 // BlogLayout.js
-
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import BlogContent from "@/app/components/BlogContent";
 import contentData  from "@/assets/data/content_data";
 import useWindowWidth from "@/hooks/useWindowWidth";
@@ -12,13 +11,14 @@ import { SEO } from "@/app/components/SEO";
 export default function BlogLayout() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const width = useWindowWidth();
-  const [activePost, setActivePost] = useState("cmd-commands");
+  const [activePost, setActivePost] = useState("git-commands");
   const [copiedIndex, setCopiedIndex] = useState(null);
 
   const blogPosts = [
-    { id: "cmd-commands", title: "CMD Commands", category: "Windows" },
     { id: "git-commands", title: "Git Commands", category: "Version Control" },
+    { id: "cmd-commands", title: "CMD Commands", category: "Windows" },
     { id: "npm-commands", title: "NPM Commands", category: "Package Manager" },
+    { id: "npx-commands", title: "NPX Commands", category: "Package Manager" },
     { id: "docker-basics", title: "Docker Basics", category: "DevOps" },
   ];
 

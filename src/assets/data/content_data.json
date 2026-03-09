@@ -1,7 +1,232 @@
 {
+    "git-commands": {
+        "title": "Git Commands",
+        "items": [
+            {
+                "title": "Clone Git Repository to your local machine",
+                "command": "git clone https://github.com/yourrepository"
+            },
+            {
+                "title": "Git create a branch",
+                "command": "git checkout -b hotFix"
+            },
+            {
+                "title": "Git remove a file",
+                "command": "git rm \"file name\""
+            },
+            {
+                "title": "Git add all edited files to queue",
+                "command": "git add ."
+            },
+            {
+                "title": "Remove from add",
+                "command": "git reset"
+            },
+            {
+                "title": "Commit changes",
+                "command": "git commit -m \"Your Message\""
+            },
+            {
+                "title": "Create new repo",
+                "command": "git init"
+            },
+            {
+                "title": "Clone remote repo",
+                "command": "git clone <url>"
+            },
+            {
+                "title": "Show changes",
+                "command": "git status"
+            },
+            {
+                "title": "Stage a file",
+                "command": "git add <file>"
+            },
+            {
+                "title": "Stage all changes",
+                "command": "git add ."
+            },
+            {
+                "title": "Commit staged changes",
+                "command": "git commit -m \"msg\""
+            },
+            {
+                "title": "Stage tracked + commit",
+                "command": "git commit -am \"msg\""
+            },
+            {
+                "title": "Compact history view",
+                "command": "git log --oneline --graph"
+            },
+            {
+                "title": "Show unstaged changes",
+                "command": "git diff"
+            },
+            {
+                "title": "Show staged vs last commit",
+                "command": "git diff --staged"
+            },
+            {
+                "title": "List branches",
+                "command": "git branch"
+            },
+            {
+                "title": "Create branch",
+                "command": "git branch <name>"
+            },
+            {
+                "title": "Switch branch",
+                "command": "git switch <name>"
+            },
+            {
+                "title": "Create + switch",
+                "command": "git switch -c <name>"
+            },
+            {
+                "title": "Old way to switch branch",
+                "command": "git checkout <name>"
+            },
+            {
+                "title": "Delete branch",
+                "command": "git branch -d <name>"
+            },
+            {
+                "title": "Show remotes List all configured remotes",
+                "command": "git remote -v"
+            },
+            {
+                "title": "Update current branch",
+                "command": "git pull"
+            },
+            {
+                "title": "Rebase instead of merge",
+                "command": "git pull --rebase"
+            },
+            {
+                "title": "Push current branch",
+                "command": "git push"
+            },
+            {
+                "title": "First push + set upstream",
+                "command": "git push -u origin <branch>"
+            },
+            {
+                "title": "Merge into current",
+                "command": "git merge <branch>"
+            },
+            {
+                "title": "Rebase onto branch",
+                "command": "git rebase <branch>"
+            },
+            {
+                "title": "Apply specific commit",
+                "command": "git cherry-pick <commit>"
+            },
+            {
+                "title": "Discard local changes",
+                "command": "git restore <file>"
+            },
+            {
+                "title": "Unstage all staged files in the current directory",
+                "command": "git restore --staged"
+            },
+            {
+                "title": "Unstage file",
+                "command": "git restore --staged <file>"
+            },
+            {
+                "title": "Unstage file",
+                "command": "git reset <file>"
+            },
+            {
+                "title": "Reset everything to last commit",
+                "command": "git reset --hard HEAD"
+            },
+            {
+                "title": "Undo commit with new commit",
+                "command": "git revert <commit>"
+            },
+            {
+                "title": "Change commit message",
+                "command": "git commit --amend"
+            },
+            {
+                "title": "Stash changes",
+                "command": "git stash"
+            },
+            {
+                "title": "List stashes",
+                "command": "git stash list"
+            },
+            {
+                "title": "Apply + remove stash",
+                "command": "git stash pop"
+            },
+            {
+                "title": "List tags",
+                "command": "git tag"
+            },
+            {
+                "title": "Create tag",
+                "command": "git tag <name>"
+            },
+            {
+                "title": "Push tag",
+                "command": "git push origin <name>"
+            },
+            {
+                "title": "Show public history",
+                "command": "git log -g"
+            },
+            {
+                "title": "Show private history",
+                "command": "git reflog"
+            },
+            {
+                "title": "Remove untracked files/dirs",
+                "command": "git clean -fd"
+            }
+        ]
+    },
     "cmd-commands": {
         "title": "Windows CMD Commands",
         "items": [
+            {
+                "title": "Create a New Folder/Directory",
+                "command": "mkdir NewFolder"
+            },
+            {
+                "title": "Delete a Folder/Directory recursively",
+                "command": "rmdir /s /q FolederToDelete"
+            },
+            {
+                "title": "Delete a Folder/Directory recursively",
+                "command": "rd /s /q FolederToDelete"
+            },
+            {
+                "title": "Create a New File",
+                "command": "echo > NewFile.txt"
+            },
+            {
+                "title": "Create a New File",
+                "command": "del fileToDelete.txt"
+            },
+            {
+                "title": "List files and folders in the current directory",
+                "command": "dir"
+            },
+            {
+                "title": "List files and folders by descending order (newest first)",
+                "command": "dir /o-d"
+            },
+            {
+                "title": "List files and folders by time of creation (newest first)",
+                "command": "dir /o-d /t:c"
+            },
+            {
+                "title": "List files and folders by time of last access (newest first)",
+                "command": "dir /o-d /t:a"
+            },
             {
                 "title": "Windows Restart Computer",
                 "command": "shutdown /r /t 0",
@@ -54,35 +279,6 @@
             }
         ]
     },
-    "git-commands": {
-        "title": "Git Commands",
-        "items": [
-            {
-                "title": "Clone Git Repository to your local machine",
-                "command": "git clone https://github.com/yourrepository"
-            },
-            {
-                "title": "Git create a branch",
-                "command": "git checkout -b hotFix"
-            },
-            {
-                "title": "Git remove a file",
-                "command": "git rm \"file name\""
-            },
-            {
-                "title": "Git add all edited files to queue",
-                "command": "git add ."
-            },
-            {
-                "title": "Remove from add",
-                "command": "git reset"
-            },
-            {
-                "title": "Commit changes",
-                "command": "git commit -m \"Your Message\""
-            }
-        ]
-    },
     "npm-commands": {
         "title": "NPM Commands",
         "items": [
@@ -101,6 +297,19 @@
             {
                 "title": "Uninstall a package",
                 "command": "npm uninstall package-name"
+            }
+        ]
+    },
+    "npx-commands": {
+        "title": "NPX Commands",
+        "items": [
+            {
+                "title": "Build static Next.js app",
+                "command": "npx next build"
+            },
+            {
+                "title": "Serve static files",
+                "command": "npx serve out"
             }
         ]
     },

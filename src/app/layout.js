@@ -40,7 +40,9 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={`${roboto.variable} ${montserrat.variable} antialiased`}>
-        {children}
+        <div className="min-h-screen bg-slate-50 flex flex-col">
+          {children}
+        </div>
       </body>
     </html>
   );
