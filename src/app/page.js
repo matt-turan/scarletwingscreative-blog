@@ -5,5 +5,7 @@ import { generateMetadata } from "@/assets/data/metadata";
 export const metadata = generateMetadata("devblog");
 
 export default function Home() {
-  return <BlogLayout />;
+  return (
+    <BlogLayout />
+  );
 }
